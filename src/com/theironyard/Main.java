@@ -17,7 +17,7 @@ public class Main {
         while (true) {
             printPosts(posts, replyId);
 
-            replyId = readId(consoleScanner);
+            replyId = readId(consoleScanner.nextLine());
         }
     }
 
@@ -46,8 +46,8 @@ public class Main {
         }
     }
 
-    public static int readId(Scanner consoleScanner) {
+    public static int readId(String input) {
         System.out.println("Type the id you want to see replies to:");
-        return Integer.valueOf(consoleScanner.nextLine());
+        return Integer.valueOf(input);
     }
 }
